@@ -1,0 +1,140 @@
+body {
+  background-color: #02010a;
+  font-family: 'Dancing Script', cursive;
+  margin: auto;
+}
+@media (min-width:900px) {
+  #contenido {
+    width: 900px;
+    margin: auto;
+  }
+}
+header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #5b7989;
+  color: white;
+  display: flex;
+  animation: miAnimacion 1s;
+}
+@-webkit-keyframes miAnimacion {
+  0% {
+    margin-top: 150%;
+  }
+  60% {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+h1 {
+  padding-left: 20px;
+  text-shadow: 2px 2px #02010a;
+  flex-grow: 2;
+}
+nav {
+  padding-top: 40px;
+  padding-right: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+a {
+  padding: 5px;
+  text-decoration: underline;
+}
+a:link, a:visited {
+  color: white;
+}
+a[href='#'] {
+  text-decoration: none;
+}
+.principal {
+  background-color: #82c3a6;
+  padding: 0 20px 0 20px;
+}
+.secundario {
+  background-color: #d5c75f;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+}
+.secundario > figure > img, a > img {
+  border: 1px solid black;
+}
+figure {
+  margin: auto;
+  padding: 20px;
+}
+figure:first-child > img[src*='-img'] {
+-webkit-filter: blur(10px);
+filter: blur(10px);
+}
+figure:nth-child(even) > img[src*='-img'] {
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+figure:nth-child(3){
+-webkit-filter: sepia(90%);
+filter: sepia(90%);
+}
+figcaption {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+img {
+  box-shadow: 2px 2px #02010a;
+}
+img[src="media/imgPaisaje.jpg"]:hover {
+  transform: rotate(10deg);
+  transition: transform 1s;
+  box-shadow: 2px 2px #82c3a6;
+  border: solid 1px #82c3a6 ;
+}
+img[src="media/imgPaisaje.jpg"] {
+  transform: rotate(0);
+  transition: transform 1s;
+}
+img[src="media/imgRetrato.jpg"]:hover {
+  transform: translate(20px, -5px);
+  transition: transform 1s;
+  box-shadow: 2px 2px #82c3a6;
+  border: solid 1px #82c3a6;
+}
+img[src="media/imgRetrato.jpg"] {
+  transform: translate(0, 0);
+  transition: transform 1s;
+}
+footer {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #C6d5c5;
+  display: flex;
+  padding: 10px;
+}
+.piePagina {
+  padding: 0 20px 0 20px;
+}
+svg {
+  vertical-align: middle;
+}
+@media (max-width:899px) {
+  #contenido {
+    width: 100%;
+  }
+  header, footer, .secundario {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+    padding: 30px;
+  }
+  nav {
+    padding-top: 0;
+  }
+  div > section {
+    padding: 0 15px 0 15px;
+  }
+}
